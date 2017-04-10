@@ -1,0 +1,58 @@
+			#times_wrap{
+				width: 280px;
+				height: 55px;
+			}
+			#times_h{
+					display: inline-block;
+				    width: 35px;
+				    height: 37px;
+				    background-color: #440106;
+				    color: #f90013;
+				    font-size: 24px;
+				    font-family: Arial;
+				    font-weight: 700;
+				    border-radius: 3px;
+				    text-align: center;
+				    line-height: 37px;
+				    margin-top: 10px;
+			}
+			.icon{
+				display: inline-block;
+				width: 4px;
+				line-height: 10px;
+			}
+			.icon i{
+				    display: inline-block;
+				    width: 4px;
+				    height: 4px;
+				    border-radius: 100%;
+				    background-color: #440106;
+			}
+			#times_m{
+					display: inline-block;
+				    width: 35px;
+				    height: 37px;
+				    background-color: #440106;
+				    color: #f90013;
+				    font-size: 24px;
+				    font-family: Arial;
+				    font-weight: 700;
+				    border-radius: 3px;
+				    text-align: center;
+				    line-height: 37px;
+				    margin-top: 10px;
+			}
+			#times_s{
+					display: inline-block;
+				    width: 35px;
+				    height: 37px;
+				    background-color: #440106;
+				    color: #f90013;
+				    font-size: 24px;
+				    font-family: Arial;
+				    font-weight: 700;
+				    border-radius: 3px;
+				    text-align: center;
+				    line-height: 37px;
+				    margin-top: 10px;
+			}
