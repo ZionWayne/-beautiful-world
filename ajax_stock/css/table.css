@@ -1,0 +1,45 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.all{
+	width: 1190px;
+	margin: 50px auto;
+}
+#entry input{
+	width: 410px;
+	height: 20px;
+	border:1px solid #A9C6C9 ;
+	
+}
+#list {  
+	margin-top: 10px;
+    font-family: verdana,arial,sans-serif;  
+    font-size:11px;  
+    color:#333333;  
+    text-align: center;
+    border-width: 1px;  
+    border-color: #a9c6c9;  
+    border-collapse: collapse;  
+}  
+#list th {  
+    border-width: 1px;  
+    padding: 8px;  
+    width: 100px;
+    border-style: solid;  
+    border-color: #a9c6c9;  
+    border-left: none;
+    border-right: none;
+}  
+#list td {   
+	padding: 8px; 
+    border-width: 1px;  
+    border-style: solid;  
+    border-color: #a9c6c9;  
+    border-left: none;
+    border-right: none;
+}  
+#list tr:hover{
+	background: #20d897; 
+}
+
