@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.slider{
+	width:790px ;
+	height: 340px;
+	margin-left: 100px;
+	margin-top: 50px;
+	position: relative;
+}
+.slider_list li{
+	list-style: none;
+	position: absolute;
+}
+.slider_icon_L {
+	width: 25px;
+	height: 50px;
+	background-color: rgba(0,0,0,.1);
+	position: absolute;
+	top: 45%;
+	z-index: 2;
+}
+.slider_icon_L a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	line-height: 50px;
+	margin-left: 6px;
+}
+.slider_icon_R {
+	width: 25px;
+	height: 50px;
+	background-color: rgba(0,0,0,.1);
+	position: absolute;
+	top: 45%;
+	right: 0px;
+	z-index: 2;
+}
+.slider_icon_R a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	line-height: 50px;
+	margin-left: 8px;
+}
+.slider_indicator{
+	background-color: rgba(0,0,0,.1);
+	position: absolute;
+	z-index: 1;
+	bottom: 10px;
+	left: 42%;
+	border-radius: 20px;
+	padding: 4px 8px;
+	
+}
+.slider_indicator_btn {
+    display: inline-block;
+    margin-right: 10px;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+.slider_indicator_btn_last{
+	margin-right: 0px;
+}
+.slider_indicator_btn_active{
+	background-color: red;
+}
