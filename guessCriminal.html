@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>罪犯只有一个</title>
+</head>
+<body>
+<script>
+    function getKiller() {
+        var aPerson = ['A','B','C','D'];
+        var killer = 'A';
+        for (var i = 0; i < 4; i++){
+            killer = aPerson[i];
+//            console.log(killer);
+            var a1 = killer === 'B' || killer === 'C' || killer === 'D';
+            var a2 = killer === 'C';
+            var a3 = killer === 'A' || killer === 'D';
+            var a4 = killer === 'C';
+
+            console.log(i + ' : ' + killer + ' : ' + (a1 + a2 + a3 + a4));
+            if ( a1 + a2 + a3 + a4 === 2){
+                return killer;
+            }
+        }
+        return 'Not Founded';
+    }
+
+    console.log(getKiller());
+
+</script>
+</body>
+</html>
