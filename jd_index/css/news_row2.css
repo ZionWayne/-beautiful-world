@@ -1,0 +1,61 @@
+
+
+.f-l{
+	float: left;
+}
+.f-r{
+	float: right;
+}
+
+.nav{
+	position: relative;
+	width: 191px;
+	height: 156px;
+	margin: 0 auto;
+	font-family: "黑体";
+	font-size: 14px;
+}
+.nav ul{
+	list-style: none;
+	height: 26px;
+	border-top: 1px solid gainsboro;
+	border-bottom: 1px solid gainsboro;
+}
+.nav a{
+	text-decoration: none;
+	text-align: center;
+	color:black;
+}
+
+.item_1,.item_2,.item_4{
+	display: block;
+	position: relative;
+	width:50px;
+	line-height:26px;
+	
+	margin-left:2px;
+	
+	z-index: 2;
+	
+}
+.selected{
+	border-bottom: 2px solid red;
+}
+.conve_bd_item{
+	position: absolute;
+	margin: 10px 5px;
+	display: none;
+	top: 30px;
+	width:185px;
+	height: 130px;
+     z-index: 1;	
+}
+.conve_bd_item_check{
+	display: block;
+	
+}
+.conve_bd_item span{
+	line-height: 23px;
+}
+
+

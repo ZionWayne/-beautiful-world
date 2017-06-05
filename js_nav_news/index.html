@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>导航栏</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<div  id="nav" class="nav">
+			<ul>
+				<li class="item_1 f-l">
+					<a href="#">
+						<span class="item_icon "></span>
+						<p>充话费</p>
+					</a>
+				</li>
+			    <li class="item_2 f-l">
+					<a href="#">
+						<span class="item_icon "></span>
+						<p>游戏</p>
+					</a>
+				</li>
+				<li class="item_3 f-l">
+					<a href="#">
+						<span class="item_icon "></span>
+						<p>旅行</p>
+					</a>
+				</li>
+				<li class="item_4 f-l">
+					<a href="#">
+						<span class="item_icon "></span>
+						<p>车险</p>
+					</a>
+				</li>
+			</ul>
+		<div class="conve_bd_item">
+			<span >
+				123456789
+			</span>
+		</div>
+		<div class="conve_bd_item">
+			<span >
+				12345678
+			</span>
+		</div>
+		<div class="conve_bd_item">
+			<span >
+				1234567
+			</span>
+		</div>
+		<div class="conve_bd_item">
+			<span >
+				123456
+			</span>
+		</div>
+		</div>
+		<script type="text/javascript">
+			window.onload = function()
+			{
+				var box = document.getElementById('nav');
+			    var items = box.getElementsByTagName('li');
+			    var items_bd = box.getElementsByClassName('conve_bd_item');
+			     function reset(){
+			     	for (var i=0;i<items.length;i++) {
+			     		items_bd[i].style.display = 'none';
+			     		items[i].className ='item_'+(i+1)+' '+'f-l';
+			     	}
+			     }
+			    
+			    for (var i = 0;i<items.length;i++) {
+			    	(function(i){
+			    		items[i].onmouseover = function(){
+							reset();
+			    			items_bd[i].style.display = 'block';
+			    			items[i].className += ' selected';
+			    		};
+			    	}
+			    		
+			    	)(i);
+			    	
+			    }
+			    
+			    
+			        
+			};
+		</script>
+	</body>
+</html>

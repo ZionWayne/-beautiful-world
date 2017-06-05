@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8" />
+		<title>股票</title>
+		<script type="text/javascript" src="js/jquery-3.1.1.slim.js" ></script>
+	</head>
+	
+	<body>
+		<div id="entry">
+		<label for="">请输入股票编码</label>
+		<input type="text" name="" class="stockNum" value=""/>
+		<button class="refer_btn">确定</button>
+		</div>
+		
+		<div class="showcase">
+			<table  id="list" border="1" cellspacing=" " cellpadding="">
+				<tr>
+					<td>编号</td>
+					<td>名称</td>
+					<td>成交最高价</td>
+					<td>成交最低价</td>
+					<td>成交价</td>
+					<td>时间</td>
+				</tr>
+			</table>
+			
+		</div>
+	</body>
+	
+		
+		<script type="text/javascript">
+			
+		var inter_url = 'http://api.money.126.net/data/feed/0600030?callback=refreshPrice';
+		
+		//创建script
+		function creatScript(){
+			var creatScript = document.createElement('script');
+			 orientate_entry = document.getElementById('entry');
+			 	creatScript.src = inter_url;
+				orientate_entry.appendChild(creatScript);
+		}
+		//删除script
+		function removeScript(){
+			var removeScript_entry = orientate.childNodes[-2];
+			orientate_entry.removeChild(removeScript);
+		}
+		//创建table
+		function creatTable(){
+			var creatTable = document.createElement('td');
+			 orientate_table = document.getElementById('list');
+			var rowsNum = orientate_table.rows.length;
+			var cosNum = orientate_table.rows[0].cells.length;
+			var newRow = orientate_table.insertRow(rowsNum);
+			var newcol = newRow.insertCell(0);
+			     newcol.innerHTML = code ;
+			var newcol = newRow.insertCell(1);
+			     newcol.innerHTML = name ;
+		    var newcol = newRow.insertCell(2);
+			     newcol.innerHTML = high ;
+		     var newcol = newRow.insertCell(3);
+			     newcol.innerHTML = low ;
+		     var newcol = newRow.insertCell(4);
+			      newcol.innerHTML = price ;
+		     var newcol = newRow.insertCell(5);
+			     newcol.innerHTML = time ;
+			
+		}
+		//删除table行
+		function delTable(){
+			orientate_table.deleteRow(1);
+		}
+		//取得跨域值
+		function refreshPrice(date){
+			  code = date['0600030'].code;
+//			  console.log(code);
+			  name = date['0600030'].name;
+			  high = date['0600030'].high;
+			  low = date['0600030'].low;
+			  price = date['0600030'].price;
+			  time = date['0600030'].time;
+//			 console.log(date);
+//								console.log(date['0600030'].code);
+//								console.log(date['0600030'].name);
+//								console.log(date['0600030'].high);
+//								console.log(date['0600030'].low);
+//								console.log(date['0600030'].time);
+					creatTable();
+								
+				}
+			creatScript();
+			
+			//获得input值
+		function getstockNum(){
+			var stockNum_in = document.getElementsByClassName('stockNum')[0];
+			var stock_Num = stockNum_in.value;
+			console.log(stock_Num);
+		}
+		var referBtn = document.getElementsByClassName('refer_btn')[0];
+		
+		referBtn.onclick =  function(){
+			getstockNum();
+		};
+		
+		var count = 0;
+		//定时器
+		function timeChange(){
+			autoChange = setTimeout(function(){
+			
+			},2000);
+		}
+		
+		
+		</script>
+		
+		
+		
+</html>
